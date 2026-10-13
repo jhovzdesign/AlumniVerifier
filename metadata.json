@@ -1,0 +1,10 @@
+{
+  "name": "Remix Panpacific Alumni QR Verification System",
+  "description": "Official University Alumni QR Verification and Certificate System with live database verification, alumni card status tracking, and printable credentials.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

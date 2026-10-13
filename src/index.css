@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+:root {
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-cinzel: 'Cinzel', serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f7f6f2;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-serif-official {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-mono-ref {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Certificate Styles & Guilloche-inspired security border */
+.certificate-shadow {
+  box-shadow: 0 20px 50px -15px rgba(28, 25, 23, 0.15), 0 0 0 1px rgba(180, 83, 9, 0.2);
+}
+
+.certificate-double-border {
+  border: 10px double #854d0e;
+  position: relative;
+}
+
+.certificate-inner-line {
+  border: 1px solid rgba(180, 83, 9, 0.4);
+}
+
+.certificate-corner {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-color: #854d0e;
+}
+
+/* Watermark background */
+.certificate-watermark {
+  background-image: radial-gradient(#d97706 0.75px, transparent 0.75px);
+  background-size: 24px 24px;
+}
+
+/* Print Rules */
+@media print {
+  @page {
+    size: letter portrait;
+    margin: 1cm;
+  }
+  
+  html, body {
+    background: white !important;
+    color: black !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+  
+  .print-certificate-container {
+    box-shadow: none !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    border: 8px double #854d0e !important;
+    padding: 24px !important;
+    page-break-inside: avoid !important;
+  }
+}
